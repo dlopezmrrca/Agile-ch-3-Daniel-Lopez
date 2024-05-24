@@ -1,4 +1,4 @@
-# Load the required gems/libraries.
+# Load the required gems/libraries. ee
 require 'rubygems'
 require 'bundler/setup'
 require 'active_record'
