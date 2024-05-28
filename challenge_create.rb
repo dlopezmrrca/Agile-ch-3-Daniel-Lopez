@@ -18,7 +18,8 @@ new_product.save
 puts new_product.inspect
 
 
-# Method Two: Create a Product in "object space"
+# Method Two:
+# Create a Product in "object space"
 
 # This time we set the required properties as key/value arguments of the new method.
 
@@ -35,12 +36,15 @@ new_product2.save
 # We can call inspect on any object to inspect its internals.
 puts new_product2.inspect
 
-# Method Three: Create the object and persist it all at once.
+# Method Three:
+#Create the object and persist it all at once.
 
 new_product3 = Product.new( name:  "Tamal",
                       price: 4.55,
                       description:  "Tamal Description",
                       stock_quantity: 20)
+
+#4
 
 #Create a Product object that is missing some required columns.
 
