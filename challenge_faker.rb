@@ -1,25 +1,21 @@
 require_relative 'ar.rb'
 
-# challenge_faker.rb
-
-# In a loop, use Faker to generate 10 new categories.
-10.times do
-  # Create a new category with Faker data
+for i in 1..10
+ # In a loop user Faker to generate 10 new categories.
   category = Category.create(
     name: Faker::Commerce.department,
     description: Faker::Lorem.sentence
   )
 
-  # Loop to generate 10 new products for each category
-  10.times do
-    # Create a new product associated with the current category
+
+  for j in 1..10
+    # Within this same loop use the newly created and saved category objects to generate 10 new products for each category. The name, description, price and quantity of these 10 products should also be generated using faker.
     product = category.products.create(
       name: Faker::Commerce.product_name,
       description: Faker::Lorem.sentence,
       price: Faker::Commerce.price,
-      stock_quantity: Faker::Number.number(digits: 10)
+      stock_quantity: Faker::Number.number(2)
     )
-
     puts "Created product '#{product.name}' associated with category '#{category.name}'."
   end
 end
