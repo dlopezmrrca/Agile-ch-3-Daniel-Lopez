@@ -14,7 +14,7 @@ all_products = Product.all
 #3
 # If we know the primary key we can search for it directly with find.
 
-product_by_id = Product.find()
+product_by_id = Product.find(177)
 
 puts product_by_id.inspect
 
